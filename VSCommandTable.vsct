@@ -1,69 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<Extern href="stdidcmd.h"/>
-	<Extern href="vsshlids.h"/>
-	<Include href="KnownImageIds.vsct"/>
-	<Include href="VSGlobals.vsct"/>
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+    <Include href="KnownImageIds.vsct"/>
+    <Include href="VSGlobals.vsct"/>
 
-	<Commands package="Ixxtension">
-		<Groups>
-			<Group guid="Ixxtension" id="ExtensionsGroup">
-				<Parent guid="guidSHLMainMenu" id="Extensions"/>
-			</Group>
-			<Group guid="Ixxtension" id="SettingsGroup">
-				<Parent guid="Ixxtension" id="SettingsMenu"/>
-			</Group>
-		</Groups>
+    <Commands package="Ixxtension">
+        <Groups>
+            <Group guid="Ixxtension" id="MyMenuGroup" priority="0x0600">
+                <Parent guid="VSMainMenu" id="Tools"/>
+            </Group>
+        </Groups>
 
-		<Menus>
-			<Menu guid="Ixxtension" id="SettingsMenu" priority="0x0100" type="Menu">
-				<Parent guid="Ixxtension" id="ExtensionsGroup"/>
-				<Strings>
-					<CommandName>Ixxtension</CommandName>
-				</Strings>
-			</Menu>
-		</Menus>
-
-		<Buttons>
-			<Button guid="Ixxtension" id="AboutCommand" priority="0x0101" type="Button">
-				<Parent guid="Ixxtension" id="SettingsGroup" />
-				<Icon guid="guidImages" id="bmpInfo" />
-				<Strings>
-					<ButtonText>About</ButtonText>
-				</Strings>
-			</Button>
+        <Buttons>
+            <Button guid="Ixxtension" id="AboutCommand" priority="0x0101" type="Button">
+                <Parent guid="Ixxtension" id="MyMenuGroup" />
+                <Icon guid="guidImages" id="bmpInfo" />
+                <Strings>
+                    <ButtonText>About</ButtonText>
+                </Strings>
+            </Button>
             <Button guid="Ixxtension" id="FileToggleCommand" priority="0x0101" type="Button">
-                <Parent guid="Ixxtension" id="SettingsGroup" />
+                <Parent guid="Ixxtension" id="MyMenuGroup" />
                 <Icon guid="guidImages" id="bmpToggle" />
                 <Strings>
                     <ButtonText>Toggle Ixx/Cpp</ButtonText>
                 </Strings>
             </Button>
-		</Buttons>
+        </Buttons>
 
-		<Bitmaps>
-			<Bitmap guid="guidImages" href="resources\images.png" usedList="bmpInfo, bmpToggle" />
-		</Bitmaps>
-	</Commands>
+        <Bitmaps>
+            <Bitmap guid="guidImages" href="resources\images.png" usedList="bmpInfo, bmpToggle" />
+        </Bitmaps>
+    </Commands>
 
-	<Symbols>
-		<GuidSymbol name="Ixxtension" value="{75bb1914-331d-4f03-9704-5077dcea1391}">
-			<IDSymbol name="ExtensionsGroup" value="101" />
-			<IDSymbol name="SettingsMenu" value="102" />
-			<IDSymbol name="SettingsGroup" value="103" />
-			<IDSymbol name="AboutCommand" value="104" />
-			<IDSymbol name="FileToggleCommand" value="105" />
-		</GuidSymbol>
+    <Symbols>
+        <GuidSymbol name="Ixxtension" value="{53fb8459-3e2c-478d-9054-56618645341c}">
+            <IDSymbol name="MyMenuGroup" value="0x0001" />
+            <IDSymbol name="AboutCommand" value="0x100" />
+            <IDSymbol name="FileToggleCommand" value="0x101" />
+        </GuidSymbol>
 
-		<GuidSymbol name="guidImages" value="{ab7ed2f6-6465-4897-ae14-95b0ebe5fcff}">
-			<IDSymbol name="bmpInfo" value="1" />
-			<IDSymbol name="bmpToggle" value="2" />
-		</GuidSymbol>
-	</Symbols>
+        <GuidSymbol name="guidImages" value="{2f30700a-020f-4193-b3c4-f7e96bb1ed8f}">
+            <IDSymbol name="bmpInfo" value="1" />
+            <IDSymbol name="bmpToggle" value="2" />
+        </GuidSymbol>
+    </Symbols>
 
-	<KeyBindings>
-		<KeyBinding guid="Ixxtension" id="FileToggleCommand" editor="guidVSStd97" key1="Q" mod1="ALT"/>
+    <KeyBindings>
+        <KeyBinding guid="Ixxtension" id="FileToggleCommand" editor="guidVSStd97" key1="Q" mod1="ALT"/>
     </KeyBindings>
-
 </CommandTable>

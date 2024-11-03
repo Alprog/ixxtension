@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Ixxtension.8215c260-7ef3-47ee-83d7-eb2a6e2f99ad" Version="1.0" Language="en-US" Publisher="Alexander Tuzhik" />
+        <Identity Id="Ixxtension.3d8a4b56-1607-44a6-ba34-8f0ff85ee125" Version="1.0" Language="en-US" Publisher="Alexander Tuzhik" />
         <DisplayName>Ixxtension</DisplayName>
         <Description xml:space="preserve">Visual studio extension to toggle between ixx/cpp files</Description>
-        <Icon>resources\icon.png</Icon>
-        <PreviewImage>resources\icon.png</PreviewImage>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Icon.png</PreviewImage>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
