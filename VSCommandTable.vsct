@@ -8,24 +8,36 @@
 
     <Commands package="Ixxtension">
         <Groups>
-            <Group guid="Ixxtension" id="MyMenuGroup" priority="0x0600">
-                <Parent guid="VSMainMenu" id="Tools"/>
+            <Group guid="Ixxtension" id="ExtensionsGroup">
+                <Parent guid="VSMainMenu" id="Extensions"/>
+            </Group>
+            <Group guid="Ixxtension" id="SettingsGroup">
+                <Parent guid="Ixxtension" id="SettingsMenu"/>
             </Group>
         </Groups>
 
-        <Buttons>
-            <Button guid="Ixxtension" id="AboutCommand" priority="0x0101" type="Button">
-                <Parent guid="Ixxtension" id="MyMenuGroup" />
-                <Icon guid="guidImages" id="bmpInfo" />
+        <Menus>
+            <Menu guid="Ixxtension" id="SettingsMenu" priority="0x0100" type="Menu">
+                <Parent guid="Ixxtension" id="ExtensionsGroup"/>
                 <Strings>
-                    <ButtonText>About</ButtonText>
+                    <CommandName>Ixxtension</CommandName>
                 </Strings>
-            </Button>
+            </Menu>
+        </Menus>
+
+        <Buttons>
             <Button guid="Ixxtension" id="FileToggleCommand" priority="0x0101" type="Button">
-                <Parent guid="Ixxtension" id="MyMenuGroup" />
+                <Parent guid="Ixxtension" id="SettingsGroup" />
                 <Icon guid="guidImages" id="bmpToggle" />
                 <Strings>
                     <ButtonText>Toggle Ixx/Cpp</ButtonText>
+                </Strings>
+            </Button>
+            <Button guid="Ixxtension" id="AboutCommand" priority="0x0102" type="Button">
+                <Parent guid="Ixxtension" id="SettingsGroup" />
+                <Icon guid="guidImages" id="bmpInfo" />
+                <Strings>
+                    <ButtonText>About</ButtonText>
                 </Strings>
             </Button>
         </Buttons>
@@ -37,9 +49,11 @@
 
     <Symbols>
         <GuidSymbol name="Ixxtension" value="{53fb8459-3e2c-478d-9054-56618645341c}">
-            <IDSymbol name="MyMenuGroup" value="0x0001" />
-            <IDSymbol name="AboutCommand" value="0x100" />
-            <IDSymbol name="FileToggleCommand" value="0x101" />
+            <IDSymbol name="ExtensionsGroup" value="101" />
+            <IDSymbol name="SettingsMenu" value="102" />
+            <IDSymbol name="SettingsGroup" value="103" />
+            <IDSymbol name="FileToggleCommand" value="104" />
+            <IDSymbol name="AboutCommand" value="105" />
         </GuidSymbol>
 
         <GuidSymbol name="guidImages" value="{2f30700a-020f-4193-b3c4-f7e96bb1ed8f}">

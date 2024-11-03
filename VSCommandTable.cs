@@ -23,9 +23,11 @@ namespace Ixxtension
     /// </summary>
     internal sealed partial class PackageIds
     {
-        public const int MyMenuGroup = 0x0001;
-        public const int AboutCommand = 0x0100;
-        public const int FileToggleCommand = 0x0101;
+        public const int ExtensionsGroup = 0x0065;
+        public const int SettingsMenu = 0x0066;
+        public const int SettingsGroup = 0x0067;
+        public const int FileToggleCommand = 0x0068;
+        public const int AboutCommand = 0x0069;
         public const int bmpInfo = 0x0001;
         public const int bmpToggle = 0x0002;
     }
